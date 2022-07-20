@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HM884J1BDS"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HM884J1BDS');
+</script>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Site</title>
 </head>
 <body>
-    <div class="container">
-        <h1>My Site</h1>   
-        <button id ='Click'> Click me</button>
+    <h1>My Site</h1>
+    <div id="div_btn">
+        <button id ='btn_1'> CLIQUE AQUI </button>
     </div>
     <script>
-        document.getElementById('Click').addEventListener('click',function(){
-            console.log("ClickMe");
+        document.getElementById('btn_1').addEventListener('click',function(){
+         
+            gtag('event', 'click_me', {
+                    'time': '1970-01-01 00:00:00 UTC',
+                    'site':'My Site',
+                    'type': 'cta',
+                    'label':'Clique Aqui',
+                    'environment':'web'
+                });
+           
         });   
     </script>
 </body>
