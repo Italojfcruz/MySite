@@ -9,12 +9,12 @@
 <body>
     <div class="container">
         <h1>My Site</h1>   
-        <button id ='Click' onclick="ClickMe()"> Click me</button>
+        <button id ='Click'> Click me</button>
     </div>
     <script>
-        function ClickMe(){
-           console.log("ClickMe");
-        }
+        document.getElementById('Click').addEventListener('click',function(){
+            console.log("ClickMe");
+        });   
     </script>
 </body>
 </html>
